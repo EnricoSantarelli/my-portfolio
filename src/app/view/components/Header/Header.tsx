@@ -16,18 +16,19 @@ export default function Header() {
     const divIconRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
         // close mobile navbar when clicking outside of it
-        document.addEventListener("mousedown", (event) => {
+        document.addEventListener("click", (event) => {
+            console.log(navbarRef.current);
             if (!navbarRef.current?.contains(event.target as Node) && !divIconRef.current?.contains(event.target as Node)) {
                 setIsNavbarOpen(false);
             }
         });
     });
 
-    //dark and light mode logic
+    // dark and light mode logic
     const { theme, toggleTheme, boldFontColor, containerBackgroundColor, thinFontColor } = useContext(ThemeContext) as ThemeContextType;
 
+    // change flag logic
     const [flag, setFlag] = useState("br");
-
     const toggleFlag = () => {
         setFlag((currentFlag) => currentFlag == "br" ? "us" : "br");
     };
@@ -47,9 +48,29 @@ export default function Header() {
                         <li className="navbarColumnItens"><a href="" className="navbarColumnLinks" style={{ color: thinFontColor }}>portfólio</a></li>
                         <li className="navbarColumnItens"><a href="" className="navbarColumnLinks" style={{ color: thinFontColor }}>contato</a></li>
                     </ul>
+                    <nav className="navbarRight">
+                        <div className="modeIcon" onClick={toggleTheme}>
+                            <div className="sun" style={{ opacity: theme == "light" ? 1 : 0, transform: theme == "light" ? "translateX(0)" : "translateX(-50px)" }}>
+                                <PiSunBold />
+                            </div>
+                            <div className="moon" style={{ opacity: theme == "light" ? 0 : 1, transform: theme == "light" ? "translateX(50px)" : "translateX(0)" }}>
+                                <PiMoonBold />
+                            </div>
+                        </div>
+                        <div className="modeIcon" onClick={toggleFlag}>
+                            <div className="flag" style={{ opacity: flag == "br" ? 1 : 0, transform: flag == "br" ? "translateX(0)" : "translateX(-50px)" }}>
+                                <img className="flagImage" src={brLightLogo} style={{ opacity: theme == "light" ? 1 : 0 }} alt="Logo Brasil" />
+                                <img className="flagImage" src={brDarkLogo} style={{ opacity: theme == "light" ? 0 : 1 }} alt="Logo Brasil" />
+                            </div>
+                            <div className="flag" style={{ opacity: flag == "br" ? 0 : 1, transform: flag == "br" ? "translateX(50px)" : "translateX(0)" }}>
+                                <img className="flagImage" src={usLightLogo} style={{ opacity: theme == "light" ? 1 : 0 }} alt="Logo Estados Unidos" />
+                                <img className="flagImage" src={usDarkLogo} style={{ opacity: theme == "light" ? 0 : 1 }} alt="Logo Estados Unidos" />
+                            </div>
+                        </div>
+                    </nav>
                 </nav>
             </div>
-            <nav ref={navbarRef} style={{ width: isNavbarOpen ? "144px" : "0px" }} className="navbarHeader">
+            <nav className="navbarHeader">
                 <ul className="navbarHeaderList">
                     <li className="navbarHeaderItens"><a href="" className="navbarHeaderLinks" style={{ color: thinFontColor }}>home</a></li>
                     <li className="navbarHeaderItens"><a href="" className="navbarHeaderLinks" style={{ color: thinFontColor }}>sobre</a></li>
