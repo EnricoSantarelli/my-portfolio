@@ -59,6 +59,7 @@ function App() {
     setTheme(newTheme);
   };
 
+  // change flag and language logic
   const [flag, setFlag] = useState("br");
   const toggleFlag = () => {
     setFlag((currentFlag) => currentFlag == "br" ? "us" : "br");
