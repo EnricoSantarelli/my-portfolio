@@ -1,0 +1,93 @@
+:root {
+  --light-background: #FFF;
+  --light-bold-font: #0f1419;
+  --light-thin-font: #536471;
+  --light-container: #f7f9f9;
+
+  --dark-background: #000;
+  --dark-bold-font: #e5e7e8;
+  --dark-thin-font: #686d72;
+  --dark-container: #16181c;
+
+  --primary: #3F72AF;
+
+
+  --container-elevation-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.1),
+    0 0 0 1px hsla(230, 13%, 9%, 0.075),
+    0 0.3px 0.4px hsla(230, 13%, 9%, 0.02),
+    0 0.9px 1.5px hsla(230, 13%, 9%, 0.045),
+    0 3.5px 6px hsla(230, 13%, 9%, 0.09);
+
+
+  --bold-weight: 800;
+  --thin-weight: 600;
+
+  --smooth-transition: cubic-bezier(0.215, 0.610, 0.355, 1) 0.8s;
+
+  --mobile-border-radius: 10px;
+  --mobile-padding: 1rem;
+
+  --mobiles-thin-font: 14px;
+  --mobiles-bold-font: 16px;
+  --mobiles-logo: 32px;
+
+  --mobilel-thin-font: 16px;
+  --mobilel-bold-font: 18px;
+  --mobilel-logo: 34px;
+
+
+  --tablet-padding: 1.5rem;
+
+  --tablet-thin-font: 20px;
+  --tablet-bold-font: 22px;
+  --tablet-logo: 38px;
+
+
+  --desktop-padding: 2rem;
+
+  --desktop-thin-font: 24px;
+  --desktop-bold-font: 26px;
+  --desktop-logo: 42px;
+
+
+  --body-max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  transition: var(--smooth-transition);
+}
+
+.App {
+  margin: auto;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  max-width: var(--body-max-width);
+  margin: auto;
+}
+
+
+@media (min-width:320px) {}
+
+@media (min-width:480px) {}
+
+@media (min-width:600px) {}
+
+@media (min-width:801px) {}
+
+@media (min-width:1025px) {}
+
+@media (min-width:1281px) {}
