@@ -80,6 +80,7 @@
     bottom: -0.5rem;
     opacity: 0;
     pointer-events: none;
+    transition: var(--smooth-transition);
 }
 
 #Header .navbarHeaderLinks:hover::after {
