@@ -134,6 +134,21 @@
     gap: 0.5rem;
 }
 
+#Header .flag {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Header .flagImage {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--mobiles-bold-font);
+}
+
 @media (min-width:320px) {
     #Header .myName {
         font-size: var(--mobilel-bold-font);
@@ -161,6 +176,10 @@
         width: calc(var(--mobilel-bold-font) + 0.5rem);
         height: calc(var(--mobilel-bold-font) + 0.5rem);
         font-size: var(--mobilel-bold-font);
+    }
+
+    #Header .flagImage {
+        width: var(--mobilel-bold-font);
     }
 }
 
@@ -229,6 +248,10 @@
     #Header .headerRight {
         gap: 0.6rem;
     }
+
+    #Header .flagImage {
+        width: var(--tablet-bold-font);
+    }
 }
 
 @media (min-width:1025px) {
@@ -270,5 +293,9 @@
 
     #Header .headerRight {
         gap: 0.7rem;
+    }
+
+    #Header .flagImage {
+        width: var(--desktop-bold-font);
     }
 }

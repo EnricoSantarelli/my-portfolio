@@ -67,11 +67,13 @@ export default function Header() {
                     </div>
                 </div>
                 <div className="modeIcon" onClick={toggleFlag}>
-                    <div className="sun" style={{ opacity: flag == "br" ? 1 : 0, transform: flag == "br" ? "translateX(0)" : "translateX(-50px)" }}>
-                        <img src={theme == "light" ? brLightLogo : brDarkLogo} alt="Logo Brasil" />
+                    <div className="flag" style={{ opacity: flag == "br" ? 1 : 0, transform: flag == "br" ? "translateX(0)" : "translateX(-50px)" }}>
+                        <img className="flagImage" src={brLightLogo} style={{ opacity: theme == "light" ? 1 : 0 }} alt="Logo Brasil" />
+                        <img className="flagImage" src={brDarkLogo} style={{ opacity: theme == "light" ? 0 : 1 }} alt="Logo Brasil" />
                     </div>
-                    <div className="moon" style={{ opacity: flag == "br" ? 0 : 1, transform: flag == "br" ? "translateX(50px)" : "translateX(0)" }}>
-                        <img src={theme == "light" ? usLightLogo : usDarkLogo} alt="Logo Brasil" />
+                    <div className="flag" style={{ opacity: flag == "br" ? 0 : 1, transform: flag == "br" ? "translateX(50px)" : "translateX(0)" }}>
+                        <img className="flagImage" src={usLightLogo} style={{ opacity: theme == "light" ? 1 : 0 }} alt="Logo Estados Unidos" />
+                        <img className="flagImage" src={usDarkLogo} style={{ opacity: theme == "light" ? 0 : 1 }} alt="Logo Estados Unidos" />
                     </div>
                 </div>
             </div>
