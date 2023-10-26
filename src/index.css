@@ -27,27 +27,29 @@
   --mobile-border-radius: 10px;
   --mobile-padding: 1rem;
 
-  --mobiles-thin-font: 14px;
+  --mobiles-thin-font: 12px;
   --mobiles-bold-font: 16px;
   --mobiles-logo: 32px;
 
-  --mobilel-thin-font: 16px;
+  --mobilel-thin-font: 14px;
   --mobilel-bold-font: 18px;
   --mobilel-logo: 34px;
 
 
+  --mobile-border-radius: 14px;
   --tablet-padding: 1.5rem;
 
-  --tablet-thin-font: 20px;
-  --tablet-bold-font: 22px;
-  --tablet-logo: 38px;
+  --tablet-thin-font: 16px;
+  --tablet-bold-font: 20px;
+  --tablet-logo: 36px;
 
 
+  --mobile-border-radius: 18px;
   --desktop-padding: 2rem;
 
-  --desktop-thin-font: 24px;
-  --desktop-bold-font: 26px;
-  --desktop-logo: 42px;
+  --desktop-thin-font: 18px;
+  --desktop-bold-font: 22px;
+  --desktop-logo: 38px;
 
 
   --body-max-width: 1200px;

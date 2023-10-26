@@ -20,7 +20,7 @@ export default function Header() {
     });
 
     //dark and light mode logic
-    const { toggleTheme, boldFontColor, containerBackgroundColor, thinFontColor } = useContext(ThemeContext) as ThemeContextType;
+    const { theme, toggleTheme, boldFontColor, containerBackgroundColor, thinFontColor } = useContext(ThemeContext) as ThemeContextType;
 
     return (
         <header id="Header">
@@ -47,8 +47,14 @@ export default function Header() {
                     <li className="navbarHeaderItens"><a href="" className="navbarHeaderLinks" style={{ color: thinFontColor }}>contato</a></li>
                 </ul>
             </nav>
-            <div className="modeIcon" style={{ color: boldFontColor }} onClick={toggleTheme}>
-                <PiSunBold />
+            <div className="modeIcon" style={{ /* color: theme == "light" ? "var(--light-background)" : "var(--dark-background)" */ }} onClick={toggleTheme}>
+                <div className="sun">
+                    <PiSunBold style={{ /* display: theme == "light" ? "flex" : "none", */ transform: theme == "light" ? "translateX(0)" : "translateX(50px)" }} />
+                </div>
+                <div className="moon" style={{ /* display: theme == "light" ? "none" : "flex",  */transform: theme == "light" ? "translateX(50px)" : "translateX(0)" }}>
+                    <PiMoonBold />
+                </div>
+
             </div>
         </header >
     );
