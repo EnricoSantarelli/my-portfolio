@@ -47,11 +47,11 @@ export default function Header() {
                     <li className="navbarHeaderItens"><a href="" className="navbarHeaderLinks" style={{ color: thinFontColor }}>contato</a></li>
                 </ul>
             </nav>
-            <div className="modeIcon" style={{ /* color: theme == "light" ? "var(--light-background)" : "var(--dark-background)" */ }} onClick={toggleTheme}>
+            <div className="modeIcon" onClick={toggleTheme}>
                 <div className="sun">
-                    <PiSunBold style={{ /* display: theme == "light" ? "flex" : "none", */ transform: theme == "light" ? "translateX(0)" : "translateX(50px)" }} />
+                    <PiSunBold style={{ opacity: theme == "light" ? 1 : 0, transform: theme == "light" ? "translateX(0)" : "translateX(-50px)" }} />
                 </div>
-                <div className="moon" style={{ /* display: theme == "light" ? "none" : "flex",  */transform: theme == "light" ? "translateX(50px)" : "translateX(0)" }}>
+                <div className="moon" style={{ opacity: theme == "light" ? 0 : 1, transform: theme == "light" ? "translateX(50px)" : "translateX(0)" }}>
                     <PiMoonBold />
                 </div>
 

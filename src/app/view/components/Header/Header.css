@@ -88,28 +88,35 @@
 }
 
 #Header .modeIcon {
-    width: fit-content;
-    height: fit-content;
+    /* applying padding in a position absolute child */
+    width: calc(var(--mobiles-bold-font) + 1rem);
+    height: calc(var(--mobiles-bold-font) + 1rem);
     font-size: var(--mobiles-bold-font);
     background-color: var(--primary);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    padding: 0.4rem;
     margin: 2rem auto 0 auto;
-    font-size: var(--mobiles-thin-font);
     transition: none;
+    overflow: hidden;
+    position: relative;
 }
 
 #Header .sun {
+    position: absolute;
+    display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--light-background);
 }
 
 #Header .moon {
+    position: absolute;
+    display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--dark-background);
 }
 
 
@@ -137,6 +144,8 @@
     }
 
     #Header .modeIcon {
+        width: calc(var(--mobilel-bold-font) + 1rem);
+        height: calc(var(--mobilel-bold-font) + 1rem);
         font-size: var(--mobilel-bold-font);
     }
 }
@@ -198,6 +207,8 @@
     }
 
     #Header .modeIcon {
+        width: calc(var(--tablet-bold-font) + 1rem);
+        height: calc(var(--tablet-bold-font) + 1rem);
         font-size: var(--tablet-bold-font);
     }
 }
@@ -234,6 +245,8 @@
     }
 
     #Header .modeIcon {
+        width: calc(var(--desktop-bold-font) + 1rem);
+        height: calc(var(--desktop-bold-font) + 1rem);
         font-size: var(--desktop-bold-font);
     }
 }
