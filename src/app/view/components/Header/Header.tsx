@@ -1,4 +1,8 @@
 import myLogo from "../../../assets/my_logo.svg";
+import brLightLogo from "../../../assets/br_light_logo.svg";
+import brDarkLogo from "../../../assets/br_dark_logo.svg";
+import usLightLogo from "../../../assets/us_light_logo.svg";
+import usDarkLogo from "../../../assets/us_dark_logo.svg";
 import { PiListBold, PiSunBold, PiMoonBold } from "react-icons/pi";
 import "./Header.css";
 import { useContext, useEffect, useRef, useState } from "react";
@@ -21,6 +25,12 @@ export default function Header() {
 
     //dark and light mode logic
     const { theme, toggleTheme, boldFontColor, containerBackgroundColor, thinFontColor } = useContext(ThemeContext) as ThemeContextType;
+
+    const [flag, setFlag] = useState("br");
+
+    const toggleFlag = () => {
+        setFlag((currentFlag) => currentFlag == "br" ? "us" : "br");
+    };
 
     return (
         <header id="Header">
@@ -47,14 +57,23 @@ export default function Header() {
                     <li className="navbarHeaderItens"><a href="" className="navbarHeaderLinks" style={{ color: thinFontColor }}>contato</a></li>
                 </ul>
             </nav>
-            <div className="modeIcon" onClick={toggleTheme}>
-                <div className="sun">
-                    <PiSunBold style={{ opacity: theme == "light" ? 1 : 0, transform: theme == "light" ? "translateX(0)" : "translateX(-50px)" }} />
+            <div className="headerRight">
+                <div className="modeIcon" onClick={toggleTheme}>
+                    <div className="sun" style={{ opacity: theme == "light" ? 1 : 0, transform: theme == "light" ? "translateX(0)" : "translateX(-50px)" }}>
+                        <PiSunBold />
+                    </div>
+                    <div className="moon" style={{ opacity: theme == "light" ? 0 : 1, transform: theme == "light" ? "translateX(50px)" : "translateX(0)" }}>
+                        <PiMoonBold />
+                    </div>
                 </div>
-                <div className="moon" style={{ opacity: theme == "light" ? 0 : 1, transform: theme == "light" ? "translateX(50px)" : "translateX(0)" }}>
-                    <PiMoonBold />
+                <div className="modeIcon" onClick={toggleFlag}>
+                    <div className="sun" style={{ opacity: flag == "br" ? 1 : 0, transform: flag == "br" ? "translateX(0)" : "translateX(-50px)" }}>
+                        <img src={theme == "light" ? brLightLogo : brDarkLogo} alt="Logo Brasil" />
+                    </div>
+                    <div className="moon" style={{ opacity: flag == "br" ? 0 : 1, transform: flag == "br" ? "translateX(50px)" : "translateX(0)" }}>
+                        <img src={theme == "light" ? usLightLogo : usDarkLogo} alt="Logo Brasil" />
+                    </div>
                 </div>
-
             </div>
         </header >
     );

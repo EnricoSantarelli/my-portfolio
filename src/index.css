@@ -23,6 +23,7 @@
   --thin-weight: 600;
 
   --smooth-transition: cubic-bezier(0.215, 0.610, 0.355, 1) 0.8s;
+  --scale-transform: scale(1.2);
 
   --mobile-border-radius: 10px;
   --mobile-padding: 1rem;
