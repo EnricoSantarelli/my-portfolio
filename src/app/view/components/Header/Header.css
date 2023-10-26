@@ -37,6 +37,7 @@
     border-bottom-left-radius: var(--mobile-border-radius);
     box-shadow: var(--container-elevation-shadow);
     display: flex;
+    transition: var(--width-transition);
 }
 
 #Header .navbarColumnList {

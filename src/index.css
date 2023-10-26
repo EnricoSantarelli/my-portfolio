@@ -22,7 +22,8 @@
   --bold-weight: 800;
   --thin-weight: 600;
 
-  --smooth-transition: cubic-bezier(0.215, 0.610, 0.355, 1) 0.8s;
+  --smooth-transition: transform 0.8s cubic-bezier(0.215, 0.610, 0.355, 1), opacity 0.8s cubic-bezier(0.215, 0.610, 0.355, 1), color 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
+  --width-transition: width 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
   --scale-transform: scale(1.2);
 
   --mobile-border-radius: 10px;
