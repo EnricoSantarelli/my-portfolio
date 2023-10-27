@@ -3,8 +3,8 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    gap: 0.5rem;
-    padding: var(--mobile-padding) var(--mobile-padding) 0.5rem 0.5rem;
+    gap: 0.4rem;
+    padding: var(--mobile-padding) var(--mobile-padding) 0.4rem 0.4rem;
 }
 
 #Switcher .modeIcon {
@@ -73,8 +73,8 @@
 
 @media (min-width:600px) {
     #Switcher .headerRight {
-        gap: 0.6rem;
-        padding: var(--tablet-padding) var(--tablet-padding) 0.6rem 0.6rem;
+        gap: 0.5rem;
+        padding: var(--tablet-padding) var(--tablet-padding) 0.5rem 0.5rem;
     }
 
     .modeIcon {
@@ -91,8 +91,8 @@
 
 @media (min-width:1025px) {
     #Switcher .headerRight {
-        gap: 0.7rem;
-        padding: var(--desktop-padding) var(--desktop-padding) 0.7rem 0.7rem;
+        gap: 0.6rem;
+        padding: var(--desktop-padding) var(--desktop-padding) 0.6rem 0.6rem;
     }
 
     #Switcher .modeIcon {
