@@ -1,0 +1,107 @@
+#Switcher {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+    padding: var(--mobile-padding) var(--mobile-padding) 0.5rem 0.5rem;
+}
+
+#Switcher .modeIcon {
+    /* applying padding in a position absolute child */
+    width: calc(var(--mobiles-thin-font) + 0.5rem);
+    height: calc(var(--mobiles-thin-font) + 0.5rem);
+    font-size: var(--mobiles-thin-font);
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+#Switcher .modeIcon:hover {
+    transform: var(--scale-transform);
+    cursor: pointer;
+}
+
+#Switcher .sun {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-background);
+}
+
+#Switcher .moon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-background);
+}
+
+#Switcher .flag {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Switcher .flagImage {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--mobiles-thin-font);
+}
+
+
+@media (min-width:320px) {
+    #Switcher .modeIcon {
+        width: calc(var(--mobilel-thin-font) + 0.5rem);
+        height: calc(var(--mobilel-thin-font) + 0.5rem);
+        font-size: var(--mobilel-thin-font);
+    }
+
+    #Switcher .flagImage {
+        width: var(--mobilel-thin-font);
+    }
+}
+
+
+@media (min-width:600px) {
+    #Switcher .headerRight {
+        gap: 0.6rem;
+        padding: var(--tablet-padding) var(--tablet-padding) 0.6rem 0.6rem;
+    }
+
+    .modeIcon {
+        width: calc(var(--tablet-thin-font) + 0.5rem);
+        height: calc(var(--tablet-thin-font) + 0.5rem);
+        font-size: var(--tablet-thin-font);
+    }
+
+    .flagImage {
+        width: var(--tablet-thin-font);
+    }
+}
+
+
+@media (min-width:1025px) {
+    #Switcher .headerRight {
+        gap: 0.7rem;
+        padding: var(--desktop-padding) var(--desktop-padding) 0.7rem 0.7rem;
+    }
+
+    #Switcher .modeIcon {
+        width: calc(var(--desktop-thin-font) + 0.5rem);
+        height: calc(var(--desktop-thin-font) + 0.5rem);
+        font-size: var(--desktop-thin-font);
+    }
+
+    #Switcher .flagImage {
+        width: var(--desktop-thin-font);
+    }
+}

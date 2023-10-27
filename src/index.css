@@ -89,114 +89,14 @@
   margin: auto;
 }
 
-.headerRight {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 0.5rem;
-  padding: var(--mobile-padding) var(--mobile-padding) 0.5rem 0.5rem;
-}
-
-.modeIcon {
-  /* applying padding in a position absolute child */
-  width: calc(var(--mobiles-bold-font) + 0.5rem);
-  height: calc(var(--mobiles-bold-font) + 0.5rem);
-  font-size: var(--mobiles-bold-font);
-  background-color: var(--primary);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  overflow: hidden;
-  position: relative;
-}
-
-.modeIcon:hover {
-  transform: var(--scale-transform);
-  cursor: pointer;
-}
-
-.sun {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--light-background);
-}
-
-.moon {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--dark-background);
-}
-
-.flag {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.flagImage {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: var(--mobiles-bold-font);
-}
-
-
-@media (min-width:320px) {
-  .modeIcon {
-    width: calc(var(--mobilel-bold-font) + 0.5rem);
-    height: calc(var(--mobilel-bold-font) + 0.5rem);
-    font-size: var(--mobilel-bold-font);
-  }
-
-  .flagImage {
-    width: var(--mobilel-bold-font);
-  }
-}
+@media (min-width:320px) {}
 
 @media (min-width:480px) {}
 
-@media (min-width:600px) {
-  .headerRight {
-    gap: 0.6rem;
-    padding: var(--tablet-padding) var(--tablet-padding) 0.6rem 0.6rem;
-  }
-
-  .modeIcon {
-    width: calc(var(--tablet-bold-font) + 0.5rem);
-    height: calc(var(--tablet-bold-font) + 0.5rem);
-    font-size: var(--tablet-bold-font);
-  }
-
-  .flagImage {
-    width: var(--tablet-bold-font);
-  }
-}
+@media (min-width:600px) {}
 
 @media (min-width:801px) {}
 
-@media (min-width:1025px) {
-  .headerRight {
-    gap: 0.7rem;
-    padding: var(--desktop-padding) var(--desktop-padding) 0.7rem 0.7rem;
-  }
-
-  .modeIcon {
-    width: calc(var(--desktop-bold-font) + 0.5rem);
-    height: calc(var(--desktop-bold-font) + 0.5rem);
-    font-size: var(--desktop-bold-font);
-  }
-
-  .flagImage {
-    width: var(--desktop-bold-font);
-  }
-}
+@media (min-width:1025px) {}
 
 @media (min-width:1281px) {}
