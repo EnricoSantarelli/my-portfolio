@@ -3,6 +3,7 @@ import { PiListBold, } from "react-icons/pi";
 import "./Header.css";
 import { useContext, useEffect, useRef, useState } from "react";
 import { ThemeContext, ThemeContextType } from "../../../App";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
 
@@ -13,7 +14,6 @@ export default function Header() {
     useEffect(() => {
         // close mobile navbar when clicking outside of it
         document.addEventListener("click", (event) => {
-            console.log(navbarRef.current);
             if (!navbarRef.current?.contains(event.target as Node) && !divIconRef.current?.contains(event.target as Node)) {
                 setIsNavbarOpen(false);
             }
@@ -22,6 +22,9 @@ export default function Header() {
 
     // dark and light mode logic
     const { boldFontColor, containerBackgroundColor, thinFontColor } = useContext(ThemeContext) as ThemeContextType;
+
+    // language logic
+    const { t } = useTranslation();
 
     return (
         <header id="Header">
@@ -33,19 +36,19 @@ export default function Header() {
                 </div>
                 <nav ref={navbarRef} style={{ width: isNavbarOpen ? "144px" : "0px", backgroundColor: containerBackgroundColor }} className="navbarColumn">
                     <ul className="navbarColumnList">
-                        <li className="navbarColumnItens"><a href="" className="navbarColumnLinks" style={{ color: thinFontColor }}>home</a></li>
-                        <li className="navbarColumnItens"><a href="" className="navbarColumnLinks" style={{ color: thinFontColor }}>sobre</a></li>
-                        <li className="navbarColumnItens"><a href="" className="navbarColumnLinks" style={{ color: thinFontColor }}>portfólio</a></li>
-                        <li className="navbarColumnItens"><a href="" className="navbarColumnLinks" style={{ color: thinFontColor }}>contato</a></li>
+                        <li className="navbarColumnItens"><a href="" className="navbarColumnLinks" style={{ color: thinFontColor }}>{t("home")}</a></li>
+                        <li className="navbarColumnItens"><a href="" className="navbarColumnLinks" style={{ color: thinFontColor }}>{t("about")}</a></li>
+                        <li className="navbarColumnItens"><a href="" className="navbarColumnLinks" style={{ color: thinFontColor }}>{t("portfolio")}</a></li>
+                        <li className="navbarColumnItens"><a href="" className="navbarColumnLinks" style={{ color: thinFontColor }}>{t("contact")}</a></li>
                     </ul>
                 </nav>
             </div>
             <nav className="navbarHeader">
                 <ul className="navbarHeaderList">
-                    <li className="navbarHeaderItens"><a href="" className="navbarHeaderLinks" style={{ color: thinFontColor }}>home</a></li>
-                    <li className="navbarHeaderItens"><a href="" className="navbarHeaderLinks" style={{ color: thinFontColor }}>sobre</a></li>
-                    <li className="navbarHeaderItens"><a href="" className="navbarHeaderLinks" style={{ color: thinFontColor }}>portfólio</a></li>
-                    <li className="navbarHeaderItens"><a href="" className="navbarHeaderLinks" style={{ color: thinFontColor }}>contato</a></li>
+                    <li className="navbarHeaderItens"><a href="" className="navbarHeaderLinks" style={{ color: thinFontColor }}>{t("home")}</a></li>
+                    <li className="navbarHeaderItens"><a href="" className="navbarHeaderLinks" style={{ color: thinFontColor }}>{t("about")}</a></li>
+                    <li className="navbarHeaderItens"><a href="" className="navbarHeaderLinks" style={{ color: thinFontColor }}>{t("portfolio")}</a></li>
+                    <li className="navbarHeaderItens"><a href="" className="navbarHeaderLinks" style={{ color: thinFontColor }}>{t("contact")}</a></li>
                 </ul>
             </nav>
         </header >

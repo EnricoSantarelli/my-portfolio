@@ -1,0 +1,14 @@
+#CursorTail {
+    overflow: hidden;
+}
+
+#CursorTail .circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: var(--primary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
