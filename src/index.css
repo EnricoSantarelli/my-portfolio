@@ -24,6 +24,7 @@
 
   --smooth-transition: transform 0.8s cubic-bezier(0.215, 0.610, 0.355, 1), opacity 0.8s cubic-bezier(0.215, 0.610, 0.355, 1), color 0.8s cubic-bezier(0.215, 0.610, 0.355, 1), background-color 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
   --width-transition: width 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
+  --button-transition: 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
   --scale-transform: scale(1.2);
 
   --mobile-border-radius: 10px;
@@ -31,27 +32,35 @@
 
   --mobiles-thin-font: 12px;
   --mobiles-bold-font: 16px;
+  --mobiles-title-font: 26px;
   --mobiles-logo: 32px;
+  --mobiles-photo: 220px;
 
   --mobilel-thin-font: 14px;
   --mobilel-bold-font: 18px;
+  --mobilel-title-font: 28px;
   --mobilel-logo: 34px;
+  --mobilel-photo: 240px;
 
 
-  --mobile-border-radius: 14px;
+  --tablet-border-radius: 14px;
   --tablet-padding: 1.5rem;
 
   --tablet-thin-font: 16px;
   --tablet-bold-font: 20px;
+  --tablet-title-font: 30px;
   --tablet-logo: 36px;
+  --tablet-photo: 340px;
 
 
-  --mobile-border-radius: 18px;
+  --desktop-border-radius: 18px;
   --desktop-padding: 2rem;
 
   --desktop-thin-font: 18px;
   --desktop-bold-font: 22px;
+  --desktop-title-font: 32px;
   --desktop-logo: 38px;
+  --desktop-photo: 400px;
 
 
   --body-max-width: 1200px;
@@ -72,21 +81,39 @@
   transition: var(--smooth-transition);
 }
 
-#root {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+::-webkit-scrollbar {
+  display: none;
 }
 
 .App {
-  margin: auto;
-  width: 100vw;
+  height: 100vh;
   flex-grow: 1;
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .container {
   max-width: var(--body-max-width);
   margin: auto;
+}
+
+section {
+  background-color: white;
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.two {
+  background-color: blue;
+}
+
+.three {
+  background-color: red;
 }
 
 @media (min-width:320px) {}

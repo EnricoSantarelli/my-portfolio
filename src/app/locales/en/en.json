@@ -2,5 +2,10 @@
     "home": "home",
     "about": "about",
     "portfolio": "portfolio",
-    "contact": "contact"
+    "contact": "contact",
+    "hi": "Hi",
+    "presentation": "I am Enrico Santarelli",
+    "welcome": "Welcome to my portfolio",
+    "more": "Know More",
+    "curriculum": "Curriculum"
 }

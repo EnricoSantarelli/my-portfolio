@@ -1,6 +1,7 @@
 import { createContext, useState } from "react";
 import Header from "./view/components/Header/Header";
 import Switcher from "./view/components/Switcher/Switcher";
+import Home from "./view/components/Home/Home";
 
 export type ThemeContextType = {
   theme: string,
@@ -57,13 +58,19 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme, backgroundColor, containerBackgroundColor, boldFontColor, thinFontColor }}>
-      < Switcher />
       <div className="App" style={{ background: backgroundColor }}>
         <div className="container">
-          <Header />
+          <section style={{ background: backgroundColor }}>
+            <Switcher />
+            <Header />
+            <Home />
+          </section>
+          <section className="two"></section>
+          <section className="three"></section>
         </div>
       </div>
-    </ThemeContext.Provider>
+
+    </ThemeContext.Provider >
   );
 }
 

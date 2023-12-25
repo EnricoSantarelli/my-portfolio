@@ -1,6 +1,7 @@
 #Header {
     padding: 0 var(--mobile-padding) var(--mobile-padding) var(--mobile-padding);
     position: relative;
+    width: 100%;
 }
 
 #Header .headerLeft {

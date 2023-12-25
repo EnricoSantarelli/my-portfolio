@@ -1,0 +1,91 @@
+#Button {
+    border: none;
+    background-color: var(--light-container);
+    padding: 0.5rem 2rem;
+    width: 100%;
+    box-shadow: var(--container-elevation-shadow);
+    font-weight: var(--thin-weight);
+    font-size: var(--mobiles-thin-font);
+    border-radius: var(--mobile-border-radius);
+    cursor: pointer;
+    position: relative;
+}
+
+#Button .title {
+    overflow: hidden;
+    transition: var(--button-transition);
+}
+
+#Button .dropColor {
+    width: 100%;
+    top: 50%;
+    left: 0;
+    border-radius: var(--mobile-border-radius);
+    position: absolute;
+    height: 0;
+    background-color: var(--primary);
+    transition: var(--button-transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Button .titleHovered {
+    font-size: var(--mobile-thin-font);
+    transition: var(--button-transition);
+    height: 0;
+    overflow: hidden;
+}
+
+#Button:hover .dropColor {
+    height: 100%;
+    top: 0;
+}
+
+#Button:hover .titleHovered {
+    height: fit-content;
+}
+
+@media (min-width:320px) {
+    #Button {
+        font-size: var(--mobilel-thin-font);
+    }
+
+    #Button .titleHovered {
+        font-size: var(--mobilel-thin-font);
+    }
+}
+
+@media (min-width:480px) {}
+
+@media (min-width:600px) {
+    #Button {
+        padding: 0.6rem;
+        font-size: var(--tablet-thin-font);
+        border-radius: var(--tablet-border-radius);
+    }
+
+    #Button .dropColor {
+        border-radius: var(--tablet-border-radius);
+    }
+
+    #Button .titleHovered {
+        font-size: var(--tablet-thin-font);
+    }
+}
+
+@media (min-width:1025px) {
+    #Button {
+        padding: 1rem;
+        font-size: var(--desktop-thin-font);
+        border-radius: var(--desktop-border-radius);
+    }
+
+    #Button .dropColor {
+        border-radius: var(--desktop-border-radius);
+    }
+
+    #Button .titleHovered {
+        font-size: var(--desktop-thin-font);
+    }
+}
