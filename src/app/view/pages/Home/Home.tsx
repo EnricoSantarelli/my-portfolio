@@ -22,7 +22,7 @@ export default function Home() {
                 <p className="secondary welcome" style={{ color: thinFontColor }}>{t("welcome")}</p>
                 <div className="buttons">
                     <Button title={t("more")} />
-                    <Button title={t("curriculum")} onClick={() => window.open("https://drive.google.com/file/d/1HI9hJyxq9UoHkqWZbELKIoMa2BetpN9X/view?usp=sharing")} />
+                    <Button title={t("curriculum")} onClick={() => window.open("https://drive.google.com/file/d/1E5KzPe3O9jRIa4nDQ8m2U8YEth4mz9OY/view?usp=drive_link")} />
                 </div>
             </div>
         </main>
